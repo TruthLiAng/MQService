@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositories\RoleRep\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dotfo.EntityFrameworkCore.DbContextScope" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MQEntityFrameworkCore\MQEntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\MQEntityModal\MQEntityModal.csproj" />
+  </ItemGroup>
+
+</Project>
