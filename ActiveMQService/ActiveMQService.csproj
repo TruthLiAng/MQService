@@ -31,6 +31,7 @@
     <ProjectReference Include="..\MQDataService\MQDataService.csproj" />
     <ProjectReference Include="..\MQEntityFrameworkCore\MQEntityFrameworkCore.csproj" />
     <ProjectReference Include="..\MQRepositories\MQRepositories.csproj" />
+    <ProjectReference Include="..\MQueueDataService\MQueueDataService.csproj" />
   </ItemGroup>
 
 </Project>

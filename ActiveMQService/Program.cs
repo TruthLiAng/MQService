@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using MQDataService.BussinessLogicService;
 using MQEntityModal.Modal;
+using MQueueDataService;
 using System;
 
 namespace ActiveMQService
@@ -17,6 +18,7 @@ namespace ActiveMQService
         private static void Main(string[] args)
         {
             Startup startup = new Startup();
+            Configuration = Startup.Configuration;
 
             var services = new ServiceCollection();
             var serviceProvider = startup.ConfigureServices(services);
@@ -29,7 +31,12 @@ namespace ActiveMQService
                 Name = "t1"
             };
 
-            userService.CreateUser(user);
+            //userService.CreateUser(user);
+
+            var mqHelper = serviceProvider.GetService<MQDataManageHelper>();
+
+            mqHelper.initAMQ();
+            //mqHelper.Send(user);
 
             Console.WriteLine("success");
             Console.ReadLine();

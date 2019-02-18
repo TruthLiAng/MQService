@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using MQDataService.BussinessLogicService;
 using MQDataService.Repositories.UserRep;
 using MQEntityFrameworkCore;
+using MQueueDataService;
 using System;
 using System.IO;
 using System.Reflection;
@@ -29,7 +30,7 @@ namespace ActiveMQService
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MQDbcontext>(options =>
-            options.UseNpgsql(Configuration.GetValue("ConnectionStrings:PostgreSql", "Debug")));
+            options.UseNpgsql(Configuration.GetValue("ConnectionStrings:PostgreSql", "")));
 
             return RegisterAutofac(services);
         }
@@ -58,6 +59,8 @@ namespace ActiveMQService
 
                 builder.Register(c => new UserRepository(c.Resolve<IAmbientDbContextLocator>())).As<IUserRepository>();
                 builder.Register(c => new UserService(c.Resolve<IDbContextScopeFactory>(), c.Resolve<IUserRepository>()));
+
+                builder.Register(c => new MQDataManageHelper(Configuration.GetValue("MQ:MQUrl", "")));
             }
 
             /// <summary>

@@ -5,6 +5,7 @@ using System.Text;
 
 namespace MQEntityModal.Modal
 {
+    [Serializable]
     public class User
     {
         [Key]

@@ -9,9 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MQEntityFrameworkCore", "MQ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MQEntityModal", "MQEntityModal\MQEntityModal.csproj", "{5211A552-B2F4-46A0-A62E-E9215706AC2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQDataService", "MQDataService\MQDataService.csproj", "{86903D60-079B-47A4-94D0-947DBB27EE74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MQDataService", "MQDataService\MQDataService.csproj", "{86903D60-079B-47A4-94D0-947DBB27EE74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQRepositories", "MQRepositories\MQRepositories.csproj", "{115A841C-A15C-4113-9122-B1927DA0BDC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MQRepositories", "MQRepositories\MQRepositories.csproj", "{115A841C-A15C-4113-9122-B1927DA0BDC5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MQueueDataService", "MQueueDataService\MQueueDataService.csproj", "{95A25B34-ABC6-4552-A68A-E0202BE41E9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQSendText", "MQSendText\MQSendText.csproj", "{65CCD5D9-20B4-44B5-B58E-0156FD5DC1DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{115A841C-A15C-4113-9122-B1927DA0BDC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{115A841C-A15C-4113-9122-B1927DA0BDC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{115A841C-A15C-4113-9122-B1927DA0BDC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95A25B34-ABC6-4552-A68A-E0202BE41E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95A25B34-ABC6-4552-A68A-E0202BE41E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95A25B34-ABC6-4552-A68A-E0202BE41E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95A25B34-ABC6-4552-A68A-E0202BE41E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65CCD5D9-20B4-44B5-B58E-0156FD5DC1DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65CCD5D9-20B4-44B5-B58E-0156FD5DC1DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65CCD5D9-20B4-44B5-B58E-0156FD5DC1DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65CCD5D9-20B4-44B5-B58E-0156FD5DC1DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
