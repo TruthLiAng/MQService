@@ -9,7 +9,7 @@ namespace MQSendText
     {
         private static void Main(string[] args)
         {
-            var mqHelper = new MQDataManageHelper("");
+            var mqHelper = new MQDataManageHelper("127.0.0.1:61616");
 
             int i = 0;
             while (true)

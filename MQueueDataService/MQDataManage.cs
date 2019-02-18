@@ -28,7 +28,7 @@ namespace MQueueDataService
 
         public MQDataManageHelper(string _url)
         {
-            URL = _url;
+            URL = "activemq:failover:(tcp://" + _url + ")";
         }
 
         /// <summary>
@@ -44,18 +44,10 @@ namespace MQueueDataService
 
             string strreceiveTopicName = "B";//接受方toptic名
 
-            //var url = "localhost:61616";//activemq地址
-
-            var userid = "admin";//帐户
-
-            var pwd = "admin";//密码
-
             try
 
             {
-                //connFac = new NMSConnectionFactory(new Uri("activemq:failover:(tcp://" + URL + ")")); //new NMSConnectionFactory(new Uri("activemq:failover:(tcp://localhost:61616)"));
-
-                connFac = new NMSConnectionFactory(new Uri("activemq:failover:(tcp://DESKTOP-MVA6IN2:61616)"));
+                connFac = new NMSConnectionFactory(new Uri(URL));
                 //新建连接
 
                 connection = connFac.CreateConnection();//connFac.CreateConnection("oa", "oa");//设置连接要用的用户名、密码
@@ -129,11 +121,7 @@ namespace MQueueDataService
         public void sendAMQ(User user)
 
         {
-            string strsendTopicName = "A";//推送方topic名
-
             string strreceiveTopicName = "B";//接受方toptic名
-
-            //var url = "localhost:61616";//activemq地址
 
             var userid = "admin";//帐户
 
@@ -142,9 +130,7 @@ namespace MQueueDataService
             try
 
             {
-                //connFac = new NMSConnectionFactory(new Uri("activemq:failover:(tcp://" + URL + ")")); //new NMSConnectionFactory(new Uri("activemq:failover:(tcp://localhost:61616)"));
-
-                connFac = new NMSConnectionFactory(new Uri("activemq:failover:(tcp://DESKTOP-MVA6IN2:61616)"));
+                connFac = new NMSConnectionFactory(new Uri(URL));
                 //新建连接
 
                 connection = connFac.CreateConnection();//connFac.CreateConnection("oa", "oa");//设置连接要用的用户名、密码
